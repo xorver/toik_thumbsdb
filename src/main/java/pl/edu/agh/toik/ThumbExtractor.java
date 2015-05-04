@@ -37,13 +37,7 @@ public class ThumbExtractor {
             for (int i = 1; i < header_len; i++) {
                 is.read();
             }
-
             BufferedImage image = ImageIO.read(is);
-
-//            JPEGImageDecoder decoder = JPEGCodec.createJPEGDecoder(is);
-//            JPEGDecodeParam param = JPEGCodec.getDefaultJPEGEncodeParam(4, JPEGDecodeParam.COLOR_ID_RGBA);
-//            decoder.setJPEGDecodeParam(param);
-
             result.add(image);
         }
         return result;
